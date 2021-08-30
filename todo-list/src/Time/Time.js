@@ -18,18 +18,18 @@ function Time(props) {
       min=Number(min)
       sec=Number(sec)
       let dateToSec=hour*60*60+min*60+sec
-    let [time,setTime]=useState(dateToSec);
+    let [time,setTime]=useState(props.time);
 
     useEffect(()=>{
         let res=setInterval(()=>{
-            setTime(props.time-time);
-        })
-        return clearInterval(res)
-    },500)
+            setTime(time);
+        },1000)
+        return ()=>{clearInterval(res)}
+    })
 
     return(
-        <div>
-            <h1>time</h1>
+        <div className="time">
+            <h1>{time}</h1>
         </div>
     )
 

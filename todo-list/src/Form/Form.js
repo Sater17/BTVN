@@ -5,10 +5,10 @@ function Form(props) {
     return (
         <div>
             <form onSubmit={props.submitHandler}>
-                <label>event:</label>
-                <input type='text' name='event'></input>
+                <label>Event:</label>
+                <input type='text' name='event' ></input><br></br>
                 <label>Date:</label>
-                <input type='text' name='date'></input>
+                <input type='text' name='date'></input><br></br>
                 <button>Submit</button>
             </form>
 

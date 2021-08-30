@@ -1,39 +1,39 @@
 import Time from './Time/Time'
 import Form from './Form/Form.js'
-import List from './List/List'
+import Frame from './Frame/Frame.js'
 import { useEffect, useState } from 'react'
 
 function App(){
 
-    let [data,setData]=useState([])
-    let  tag=''
-    let time=0
-    let flag=true
+    let [data,setData]=useState({})
+    
+    let [time,setTime] = useState(0)
+    let tmp=0
     function submitHandler(e){
         e.preventDefault()
-        let event=e.target.event
+        let event=e.target.event.value
+        let date= e.target.date.value
         
-        
-        // let date=e.target.date
-        console.log(event)
-        // let arr=date.split('/')
-        // let dateInput=Number(arr[0])*3600+Number(arr[1])*60+Number(arr[2])
-        // time=dateInput
-        // let tmp=[]
-        // tmp.push(event)
-        // tmp.push(date)
-        // tag.push(tmp)
-        flag=!flag
+        let arr=date.split('/')
+        let dateInput=Number(arr[0])*3600+Number(arr[1])*60+Number(arr[2])
+        console.log(dateInput)
+        tmp=dateInput
+        console.log(tmp)
+        setTime(dateInput)
+        setData({...data,[event]:date})
+        console.log({...data,[event]:date})
+       
     }
+    console.log(tmp)
     // useEffect(()=>{
-    //     setData(tag)
-    // },flag)
+        
+    // })
     
     return(
         <div>
             <Time time={time}></Time>
             <Form submitHandler={submitHandler}></Form>
-            {/* <List></List> */}
+            <Frame data={data}></Frame>
 
         </div>
     )
