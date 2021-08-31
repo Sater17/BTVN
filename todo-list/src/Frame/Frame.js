@@ -1,6 +1,6 @@
 import React from 'react';
 import List from '../List/List'
-
+import './frame.css'
 function Frame(props) {
     return(
         <div className='frame'>

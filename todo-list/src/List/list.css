@@ -1,6 +1,12 @@
 .list{
-    border: 1px solid black;
+   
     border-radius: 5px;
     margin :10px;
-    padding-left:10px;
+    padding:7px;
+    background-color:rgb(194, 245, 229);
+    display: block;
+    box-shadow: 5px 2px 5px rgb(149, 151, 151)
+}
+.list:hover{
+    box-shadow: 2px 2px 5px rgb(36, 35, 35)
 }

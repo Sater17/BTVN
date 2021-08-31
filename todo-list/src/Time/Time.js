@@ -22,7 +22,7 @@ function Time(props) {
 
     useEffect(()=>{
         let res=setInterval(()=>{
-            setTime(time);
+            setTime(dateInfo-1);
         },1000)
         return ()=>{clearInterval(res)}
     })

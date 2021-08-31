@@ -1,0 +1,21 @@
+.container{
+    display:flex;
+    width:50%;
+    margin: 60px auto;
+    justify-content:space-between;
+    border-style: groove;
+    align-items:center;
+    padding:10px;
+    background-color:papayawhip;
+    border-radius: 7px;
+}
+.intro{
+    padding:50px;
+    background-color:rgb(174, 243, 243);
+
+}
+.intro p{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 25px;
+}
