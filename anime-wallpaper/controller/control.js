@@ -10,7 +10,6 @@ const data ={
         src:'https://ae01.alicdn.com/kf/H245c345957f24fdb86d545bc67298243a/8-42X29Cm-M-i-Tokyo-Ghoul-L-i-Poster-Anime-Xung-Quanh-Poster-Qu-T-ng.jpg'
     }
 }
-
 export function isValid(req, res, next) {
     if(req.params.name!==('img1'||'img2')) {
         res.sendStatus(404);
@@ -22,10 +21,11 @@ export function tokyoControl(req, res) {
     res.send('sadsad')
 }
 export function img1Control(req, res) {
-    res.render('sub.ejs',{img:data[0].src})
+    res.render('sub.ejs',{image:data.img1.src})
+
 }
 export function img2Control(req, res) {
-    res.render('sub.ejs',{img:data[1].src})
+    res.render('sub.ejs',{image:data.img2.src})
 }
 
 export function addImg(req, res) {

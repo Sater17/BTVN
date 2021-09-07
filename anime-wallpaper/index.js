@@ -10,6 +10,6 @@ app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
     res.render("index.ejs")
 })
-app.get('/tokyo-ghost',router)
+app.use('/tokyo-ghost',router)
 
 app.listen(PORT, console.log(`listening on port ${PORT}`))

@@ -3,7 +3,7 @@ import {isValid,tokyoControl,img1Control,img2Control,addImg,putImg,delImg} from 
 const router=express.Router();
 router.use(express.json())
 // MIDDLEWARE
-// router.use('/tokyo-ghost/:name',isValid)
+router.use('/tokyo-ghost/:name',isValid)
 
 // GET
 router.get('/',tokyoControl)
