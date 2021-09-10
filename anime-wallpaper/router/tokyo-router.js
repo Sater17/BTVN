@@ -1,5 +1,6 @@
 import express from 'express';
 import {isValid,tokyoControl,img1Control,img2Control,addImg,putImg,delImg} from '../controller/control.js';
+
 const router=express.Router();
 router.use(express.json())
 // MIDDLEWARE
