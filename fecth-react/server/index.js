@@ -1,5 +1,5 @@
 import express from 'express'
-
+import {processApi} from './controller/api.js'
 const app=express()
 const PORT=8080
 
@@ -9,10 +9,6 @@ app.get('/',(req,res)=>{
         "status":"ok"
     })
 })
-app.get('/api',(req,res)=>{
-    res.json({
-        "api":"ok"
-    })
-})
+app.use('/api',processApi)
 
 app.listen(PORT,console.log(`Running in PORT: ${PORT}`))
