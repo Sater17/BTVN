@@ -1,7 +1,7 @@
 import express from 'express';
 import { featureRouter } from './route/feature.js';
 import { seriesRouter } from './route/series.js';
-
+import { videoRouter } from './route/video.js';
 //data 
 const data=[
     {src:"https://i.vietgiaitri.com/2020/5/28/dan-sao-hospital-playlist-viet-tam-thu-truoc-tap-cuoi-het-noi-loi-yeu-thuong-lai-tha-thinh-dan-tinh-bang-phan-2-sieu-khung-80a-4967569.jpg",
@@ -39,6 +39,7 @@ app.get('/', (req, res) => {
 
 app.use('/phim-le',featureRouter)
 app.use('/phim-bo',seriesRouter)
+app.use('/video',videoRouter)
 
 app.listen(PORT, console.log(`running in port: ${PORT}`));
 

@@ -9,5 +9,7 @@ export function mainSeries(req, res){
 }
 
 export function nameSeries(req, res){
-    res.render('name.ejs')
+    res.render('title.ejs',{
+        title:title
+    })
 }

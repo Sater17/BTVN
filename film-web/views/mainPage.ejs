@@ -24,10 +24,12 @@
 
 
                     <div class="col-3">
-                        <img src=<%=card.src%> class="img-responsive" style="width: 100%" >
-                        <p class="mt-2 text-white">
-                            <%=card.name%>
-                        </p>
+                        <a href="/phim-le/<%=card.name%>">
+                            <img src=<%=card.src%> class="img-responsive" style="width: 100%" >
+                            <p class="mt-2 text-white">
+                                <%=card.name%>
+                            </p>
+                        </a>
                     </div>
                     <%});%>
             </div>

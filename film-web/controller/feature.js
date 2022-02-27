@@ -9,5 +9,8 @@ export function mainFeature(req, res){
 
 
 export function nameFeature(req, res){
-    res.render('name.ejs')
+    
+    res.render('title.ejs',{
+        title: req.params.title
+    })
 }
